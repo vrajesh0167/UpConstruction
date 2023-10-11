@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*---------------------- Navbar section  ------------------------*/
+.navbar_Section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 999;
+}
+
+.navbar_Section .navbar-brand h3 {
+    color: #fff;
+    font-family: 'Playball', cursive;
+}
+
+.navbar_Section .navbar-brand h3 span {
+    color: #feb900;
+    font-size: 40px;
+}
+
+.navbar_Section .navbar-collapse .nav1 {
+    display: inline-block;
+    font-family: 'Lusitana', serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 15px;
+    position: relative;
+    transition: all .4s;
+}
+
+.navbar_Section .navbar-collapse ul li a:hover .nav1 {
+    color: #feb900;
+}
+
+.navbar_Section .navbar-collapse ul li a {
+    position: relative;
+}
+
+.navbar_Section .navbar-collapse .active {
+    color: #feb900;
+}
+
+.navbar_Section .navbar-collapse ul li .hover::before {
+    content: "";
+    background-color: #feb900;
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-40%) rotate(0deg);
+    transition: all .4s;
+    opacity: 0;
+}
+
+.navbar_Section .navbar-collapse .active.hover::before {
+    transform: translateX(-40%) rotate(-50deg);
+    opacity: 1;
+}
+
+.navbar_Section .navbar-collapse ul li .hover:hover::before {
+    transform: translateX(-40%) rotate(-50deg);
+    opacity: 1;
+}
+.navbar_Section .dropdown-item .nav2{
+    color: #000;
+    transition: all .4s;
+}
+.navbar_Section .dropdown-item:hover{
+    background-color: transparent;
+}
+.navbar_Section .dropdown-item:hover .nav2{
+    background-color: transparent;
+    color: #feb900;
+}
+@media screen and (max-width:992px) {
+    #navbarbutton{
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        text-align: center;
+    }
+    .navbar_Section .navbar-collapse .nav1 {
+        margin-left: 0;
+    }
+    .navbar_Section .navbar-collapse ul li .hover{
+        display: inline-block;
+    }
+    .navbar_Section .navbar-collapse ul li .hover::before {
+        content: "";
+        background-color: #feb900;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: all .4s;
+    }
+    .navbar_Section .navbar-collapse .active.hover::before {
+        transform: scaleX(1) translateX(0) rotate(0);
+    }
+    
+    .navbar_Section .navbar-collapse ul li .hover:hover::before {
+        transform: scaleX(1) translateX(0) rotate(0);
+    }
+}
+
+/*---------------------- Service-Details_section ----------------------------*/
+.Service-Details_section{
+    padding:150px 0 50px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/nav1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 30vh;
+}
+
+.Service-Details_section .Service h2{
+    font-family: 'Vollkorn', serif;
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+.Service-Details_section .Service ul{
+    list-style: none;
+}
+.Service-Details_section .Service ul li{
+    display: inline;
+}
+.Service-Details_section .Service ul li+li::before{
+    content: "/";
+    color: #fff;
+    padding-right: 10px;
+    font-size: 20px;
+}
+.Service-Details_section .Service ul li a{ 
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+    transition: all .4s;
+    font-family: 'Lusitana', serif;
+}
+.Service-Details_section .Service ul li a.active{ 
+    color: #feb900;
+}
+.Service-Details_section .Service ul li a.active::before{ 
+    color: #feb900;
+    transform: scaleX(1);
+}
+.Service-Details_section .Service ul li a::before{ 
+    content: "";
+    background-color: #feb900;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: all .4s;
+}
+.Service-Details_section .Service ul li a:hover::before{ 
+    transform: scaleX(1);
+}
+
+
+/*----------------------------------- Service-Details_section1 -----------------------------------------*/
+.Service-Details_section1{
+    padding: 60px 0;
+}
+
+.Service-Details_section1 .Service1{
+    border: 2px solid #d5d7da;
+    padding: 15px 15px 15px 0;
+}
+.Service-Details_section1 .Service1 ul{
+    list-style: none;
+}
+.Service-Details_section1 .Service1 ul li{
+    margin: 10px 0;
+    border-left: 2px solid #d9e3e8;
+    padding: 8px 0 8px 20px;
+    transition: all .4s ;
+}
+.Service-Details_section1 .Service1 ul li a{
+    text-decoration: none;
+    color: #52565e;
+    font-family: 'Lusitana', serif;
+}
+.Service-Details_section1 .Service1 ul li a.active{
+    color: #000;
+    font-weight: 600;
+}
+.Service-Details_section1 .Service1 ul li.active {
+    border-left-color: #feb900;
+}
+.Service-Details_section1 .Service1 ul li:hover {
+    border-left-color: #feb900;
+}
+
+
+.Service-Details_section1 .services1_1 h4 {
+    font-family: 'Vollkorn', serif;
+}
+.Service-Details_section1 .services1_1 p {
+    font-family: 'Lusitana', serif;
+}
+
+.Service-Details_section1 .services2 .img3{
+    width: 100%;
+}
+.Service-Details_section1 .services2 h3{
+    font-family: 'Vollkorn', serif;
+    font-size: 30px;
+}
+.Service-Details_section1 .services2 p{
+    font-family: 'Lusitana', serif;
+}
+.Service-Details_section1 .services2 ul{
+    padding-left: 5px;
+    list-style: none;
+}
+.Service-Details_section1 .services2 ul li{
+    font-family: 'Lusitana', serif;
+    padding-bottom: 10px;
+}
+.Service-Details_section1 .services2 ul li .ico1{
+    color: #feb900;
+    font-size: 25px;
+    vertical-align: -2px;
+}
+
+@media screen and (max-width:320px) {
+    .Service-Details_section1 .Service1{
+        padding: 8px 8px 8px 0;
+    }
+    .Service-Details_section1 .Service1 ul{
+        padding-left: 10px;
+    }
+    .Service-Details_section1 .Service1 ul li{
+        padding: 8px 0 8px 10px;
+    }
+    .Service-Details_section1 .Service1 ul li a{
+        font-size: 14px;
+    }
+}
+
+
+/*----------------------------- footer_section ------------------------------*/
+.footer_section{
+    padding: 50px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/14.jpg);
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.footer_section .footer h4{
+    color: #fff;
+    font-family: 'Vollkorn', serif;
+}
+.footer_section .footer h6{
+    color: #fff;
+    font-family: 'Vollkorn', serif;
+}
+.footer_section .footer h6 span{
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Lusitana', serif;
+}
+.footer_section .footer .ico5{
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 7px;
+    border-radius: 6px;
+    margin-left: 2px;
+    transition: all .4s;
+    cursor: pointer;
+}
+.footer_section .footer .ico5:hover{
+    background-color: #feb900;
+}
+
+.footer_section .footer h5{
+    font-family: 'Vollkorn', serif;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.footer_section .footer ul{
+    padding-left: 10px;
+    list-style: none;
+}
+.footer_section .footer ul li{
+    padding-bottom: 13px;
+    color:  rgba(255, 255, 255, 0.6);
+    font-size: 10px;
+    transition: all .4s;
+}
+.footer_section .footer ul li:hover{
+    color: #fff;
+}
+
+
+
+.footer_section .last_section{
+    border-top: 2px solid rgba(255, 255, 255, 0.6);
+    padding-top: 30px;
+    text-align: center;
+}
+.footer_section .last_section p{
+    font-size: 15px;
+    font-family: 'Lusitana', serif;
+}
+.footer_section .last_section p span{
+    font-family: 'Vollkorn', serif;
+}
+
